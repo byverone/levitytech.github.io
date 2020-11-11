@@ -27,10 +27,11 @@ However, when these thoughts shift to worrying about matters outside our control
 
 This model of thinking can be applied to our lives in many ways. Maybe you are late for a deadline, are frustrated someone else did not fulfill what they said they would, or weeks of planning just didn't work out this time. Regardless, we can choose how we will handle our emotions to be a positive force in our daily activities.
 
+``` python
     def anxiety_check(scenario):
       if 'stress' in scenario:
         scenario.replace('stress', 'insight and curiosity')
-
+```
 Recognizing our own emotions as a powerful force that we are willing to understand can help us become better peers, and motivate innovation. At Levity, we built this company during an epidemic and economic collapse. Despite these odds, we rallied and created an even stronger team. Levity continues to build on its remote service, and will continue to help companies invest in their digital services during these challenges, and long-after.
 
 By Bazyl Horsey, Co-founder

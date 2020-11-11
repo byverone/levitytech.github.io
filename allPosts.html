@@ -5,46 +5,6 @@ layout: default
 <!--
     Temporary
 -->
-<script>
-
-    function closeModal(title){
-        var modal = document.getElementById(title);
-        modal.className = "Modal is hidden is visuallyHidden";
-        document.getElementById("main").classList.remove("is-blurred");
-        document.getElementById("header").classList.remove("is-blurred");
-    }
-
-    function openModal(title){
-        var model = document.getElementById(title);
-        var container = document.getElementById("main");
-        modal.className = "Modal is-visuallyHidden";
-        setTimeout(function(){
-            document.getElementById("main").classList.add("is-blurred");
-            document.getElementById("header").classList.add("is-blurred");
-            modal.className = "Modal";
-        }, 50);
-    }
-
-    window.onclick=fucntion(event){
-        consol.log(event.target.className);
-        consol.log(event.target.classList);
-        if (event.target.className == "Modal"){
-            event.target.className = "Modal is-hidden is-visuallyHidden";
-            document.getElementById("main").classList.remove("is-blurred");
-            document.getElementById("header").classList.remove("is-blurred");
-        }
-    }
-
-</script>
-
-{% for post in site.posts limit:3 %}
-<div class='Modal is-hidden is-visuallyHidden' id='{{ post.title }}'>
-    <div class='Modal-content'>
-        <span id="closeModal" class="Close" onclick="closeModal('{{ post.title }}')">&times;</span>
-        {{ post }}
-    </div>
-</div>
-{% endfor %}
 
 
 <body>
@@ -65,24 +25,14 @@ layout: default
 
         <!-- All posts -->
                 <h3>All Posts</h3>
-                <div class="features">
+                <ul>
                     {% for post in site.posts limit:3 %}
-                        <article data-aos="fade-left">
-                        <div class="btn_container">
-                            <a href="#{{ post.title }}" onclick="openModal('{{ post.title }}')">
-                                <div class="card">
-                                    <img class="image" style="padding: 20px 20px 20px 20px; margin-bottom: 0px;" src="{{base.url}}/images/posts/{{post.img}}" alt=""/>
-                                    <div class="inner">
-                                        <h4 style="padding-top:36px">{{ post.title }}</h4>
-                                        <p style='margin-bottom: 0px;'>{{ post.excerpt }}</p>
-                                        <br/>
-                                    </div>
-                                </div>
-                            </a>
-                            </div>
-                        </article>
+                    <li>
+                        <a href="{{ post.img }}"></a>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </li>
                     {% endfor %}
-                </div>
+                </ul>
             </div>
     </div>
 </body>

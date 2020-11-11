@@ -1296,7 +1296,8 @@ input[type="radio"] + label:before {
       width: 100%; }
   .image.avatar {
     border-radius: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    background: white; }
     .image.avatar img {
       border-radius: 100%;
       display: block;

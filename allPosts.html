@@ -24,12 +24,16 @@ layout: default
             </script>
 
         <!-- All posts -->
-                <h3>All Posts</h3>
-                <ul>
-                    {% for post in site.posts limit:3 %}
+                <h3 style="padding-left: 20px">All Posts</h3>
+                <ul style="list-style-type: none">
+                    {% for post in site.posts %}
                     <li>
-                        <a href="{{ post.img }}"></a>
+                        <div class="card" style="padding: 20px 20px 20px 20px">
+                            <div class="imgae_box">
+                                <img src="{{base.url}}/images/posts/{{post.img}}" style="width:150px">
+                            </div>
                         <a href="{{ post.url }}">{{ post.title }}</a>
+                        </div>
                     </li>
                     {% endfor %}
                 </ul>

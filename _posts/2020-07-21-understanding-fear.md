@@ -1,5 +1,6 @@
 ---
 layout: post
+tag: blog
 featured: "True"
 title: Managing COVID Fear and Panic in the Workplace
 img: covidfear.png

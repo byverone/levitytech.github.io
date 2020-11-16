@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    {% include head.html %}
+
+	<body class="is-preload">
+
+		<!-- Header -->
+			{% include header-lm.html %}
+            <div id="wrapper">
+                {{ content }}
+                {% include footer.html %}
+            </div>
+
+
+		<!-- Scripts -->
+			<!--
+			<script src="https://www.levitytech.net/assets/js/jquery.min.js"></script>
+			<script src="https://www.levitytech.net/assets/js/jquery.scrollex.min.js"></script>
+			<script src="https://www.levitytech.net/assets/js/jquery.scrolly.min.js"></script>
+			<script src="https://www.levitytech.net/assets/js/browser.min.js"></script>
+			<script src="https://www.levitytech.net/assets/js/breakpoints.min.js"></script>
+			<script src="https://www.levitytech.net/assets/js/util.js"></script>
+			<script src="https://www.levitytech.net/assets/js/main.js"></script>
+			<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+			-->
+			
+			<script src="{{ base.url | prepend: site.url }}/assets/js/jquery.min.js"></script>
+			<script src="{{ base.url | prepend: site.url }}/assets/js/jquery.scrollex.min.js"></script>
+			<script src="{{ base.url | prepend: site.url }}/assets/js/jquery.scrolly.min.js"></script>
+			<script src="{{ base.url | prepend: site.url }}/assets/js/browser.min.js"></script>
+			<script src="{{ base.url | prepend: site.url }}/assets/js/breakpoints.min.js"></script>
+			<script src="{{ base.url | prepend: site.url }}/assets/js/util.js"></script>
+			<script src="{{ base.url | prepend: site.url }}/assets/js/main.js"></script>
+			<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+			
+			
+	</body>
+</html>

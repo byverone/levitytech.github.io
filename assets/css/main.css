@@ -1295,11 +1295,11 @@ input[type="radio"] + label:before {
       display: block;
       width: 100%; }
   .image.avatar {
-    border-radius: 100%;
+    border-radius: 200px;
     overflow: hidden;
     background: white; }
     .image.avatar img {
-      border-radius: 100%;
+      border-radius: 200px;
       display: block;
       width: 100%; }
   .image.main {
@@ -2274,5 +2274,46 @@ input[type="button"],
 .image_box {
   width: 150px;
   border: 5px dashed #r7a239; }
+
+.links {
+  color: #5ad3fe;
+  padding-right: 0px;
+  float: right; }
+
+.lm-images {
+  max-width: 50%;
+  height: auto;
+  padding: 10px; }
+
+.image_box {
+  float: left; }
+
+.filterDiv {
+  float: right;
+  background-color: #2196F3;
+  color: #fffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none; }
+
+.show {
+  display: block; }
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  float: right; }
+
+.btn:hover {
+  background-color: #ddd; }
+
+.btn.active {
+  background-color: #666;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

@@ -80,10 +80,11 @@ for(var i = 0; i < btns.length; i++){
                     <li>
                         <div class="card-btn">
                         <div class="card {{post.tag}}" style="padding: 10px 10px 10px 10px; width: 130%">
-                                <div class="imgae_box">
-                                    <img src="{{base.url}}/images/posts/{{post.img}}" style="width:150px">
+                        <a href="{{ post.url }}" style="display: flex; justify-content: center; font_size: 25px;">{{ post.title }}</a>
+                                <div class="imgae_box" style="display: inline-flex; padding: 10px">
+                                    <img src="{{base.url}}/images/posts/{{post.img}}" style="width:8%">
+                        <p style="margin-bottom: auto">{{ post.excerpt }}</p>
                                 </div>
-                        <a href="{{ post.url }}">{{ post.title }}</a>
                         </div>
                         </div>
                     </li>

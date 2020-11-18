@@ -88,7 +88,6 @@ for(i=0; i< coll.lenght; i++){
                             to disrupting a market with a new idea, Levity is ready for any task. Creating brilliant and cunning user experiences capable of overcoming
                             operational obstacles through digital innovations.
                         </p>
-                        <!--  <a href="/learnMore.html">Learn More</a> --->
                     </div>
                 </section>
 
@@ -105,13 +104,14 @@ for(i=0; i< coll.lenght; i++){
                             <li class="icon solid fa-pencil-ruler">Design</li>
                             <li class="icon solid fa-puzzle-piece">Strategy</li>
                         </ul>
+                        <a href="/learnMore.html" class="links">Learn More</a> 
                     </div>
                 </section>
 
             <!-- Featured Article -->
                 <section id="Featured" data-aos="fade-up">
                     <div class="container">
-                        <h3>Featured Article </h3>
+                        <h3>Featured Article</h3>
                         <div class="features">
                             {% for post in site.posts %}
                                 {% if post.featured == "True" %}
@@ -157,7 +157,7 @@ for(i=0; i< coll.lenght; i++){
                                     </div>
                                 </article>
                             {% endfor %}
-                            <!-- <a href="/allPosts.html">All Posts</a> --->
+                            <!-- <a href="/allPosts.html" class="links">All Posts</a> -->
                         </div>
                     </div>
                 </section>

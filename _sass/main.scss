@@ -728,8 +728,8 @@
 			height: 70%;
 			img {
 				border-radius: 200px;
-				display: block;
-				width: 100%;
+				display: inline-block;
+				width: 85%;
 			}
 		}
 
@@ -2118,4 +2118,8 @@
 
 .card-btn{
 	padding: 10px;
+}
+
+.myBtnContainer{
+	
 }

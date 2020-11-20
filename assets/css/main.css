@@ -1302,8 +1302,8 @@ input[type="radio"] + label:before {
     height: 70%; }
     .image.avatar img {
       border-radius: 200px;
-      display: block;
-      width: 100%; }
+      display: inline-block;
+      width: 85%; }
   .image.main {
     display: block;
     height: 20em;

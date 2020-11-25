@@ -6,6 +6,15 @@ layout: sidbar_removed
     Temporary
 -->
 
+{% for post in site.posts %}
+ <div class='Modal is-hidden is-visuallyHidden' id='{{ post.title }}'>
+     <div class='Modal-content'>
+         <span id="closeModal" class="Close" onclick="closeModal('{{ post.title }}')">&times;</span>
+        {{ post }}
+    </div>
+ </div>
+ {% endfor %}
+
 <body>
     <div class="loader">
         <img src="/images/loading.gif" alt="Loading...">
@@ -32,15 +41,13 @@ layout: sidbar_removed
                 <h3 style="padding-left: 20px">All Posts</h3>
                 <ul style="list-style-type: none">
                     {% for post in site.posts %}
-                    <li>
-                        <div class="card {{post.tag}}" style="padding: 10px 10px 10px 10px; width: 130%">
-                        <a href="{{ post.url }}" style="display: flex; justify-content: center; font_size: 25px;">{{ post.title }}</a>
-                                <div class="imgae_box" style="display: inline-flex; padding: 10px">
-                                    <img src="{{base.url}}/images/posts/{{post.img}}" style="width:8%; min-width: 150px">
+                        <div class="cards {{ post.filter }}">
+                            <a href="#{{ post.title }}" class="title" onclick="openModal('{{ post.title }}')">{{post.title}}</a>
+                                <div class="image_box">
+                                    <img src="{{base.url}}/images/posts/{{post.img}}" class="img_all">
                         <p style="margin-bottom: auto; padding: inherit">{{ post.excerpt }}</p>
                                 </div>
                         </div>
-                    </li>
                     {% endfor %}
                 </ul>
             </div>
@@ -49,40 +56,15 @@ layout: sidbar_removed
 
 <script>
 
-filterSelection("all")
-    
-function filterSelection(c){
-    var i, x; 
-    x = document.getElementsByClassName("card");
-    if (c == "all") c = "";
-    for(i = 0; i < x.length; i++){
-        remove(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) add(x[i], "show")
-    }
-}
-
-function add(element, name){
-    var i, arr2;
-    var arr;
-    arr = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++){
-        if (arr.indexOf(arr[2]) == -1) {
-            element.className += " " + arr[i];
+function filterSelection(sort_by){
+    var i, x;
+    x = document.getElementsByClassName('cards');
+    for( i=0; i < x.length; i++){
+        if(x[i].className == "cards " + sort_by || sort_by == "all"){
+            x[i].style.display = "block";
         }
+        else {x[i].style.display = "none";}
     }
-}
-
-function remove(element, name){
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i<arr2.length; i++){
-        while (arr1.indexOf(arr2[i]) > -1){
-        arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
-    }
-    element.className = arr1.join();
 }
 
 var btnContainer = document.getElementById("myBtnContainer");
@@ -95,4 +77,32 @@ for(var i = 0; i < btns.length; i++){
     });
 }
 
+function closeModal(title){
+    var modal = document.getElementById(title);
+    modal.className = "Modal is-hidden is-visuallyHidden";
+    document.getElementById("main").classList.remove("is-blurred");
+    //document.getElementById("header").classList.add("is-blurred");
+}
+
+function openModal(title) {                                                     
+    var modal = document.getElementById(title);                                 
+    var container = document.getElementById("main");                            
+    modal.className = "Modal is-visuallyHidden";                                
+    setTimeout(function() {                                                     
+        document.getElementById("main").classList.add("is-blurred");            
+        //document.getElementById("header").classList.add("is-blurred");          
+        modal.className = "Modal";                                              
+    }, 50);                                                                     
+}                                                                               
+                                                                                
+window.onclick = function(event) {                                              
+    console.log(event.target.className);                                        
+    console.log(event.target.classList);                                        
+    if (event.target.className == "Modal") {                                    
+        event.target.className = "Modal is-hidden is-visuallyHidden";           
+        document.getElementById("main").classList.remove("is-blurred");         
+        //document.getElementById("header").classList.remove("is-blurred");       
+    }                                                                           
+}                                                                               
+                                                                                
 </script>

@@ -2111,7 +2111,8 @@
 	transition: 0.5s;
 	border-radius: 10px;
 	border-radius: 10px 10px 10px 10px;
-	width: 130%;
+	width: auto;
+	margin-bottom: 8px;
   }
   
   .cards:hover {
@@ -2174,3 +2175,8 @@
 		display: none;
 		}
 	}
+
+/* All blogs page view */
+.all-post-header{
+	text-align: center; 
+}

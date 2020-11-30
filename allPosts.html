@@ -42,7 +42,7 @@ layout: sidbar_removed
                 <ul style="list-style-type: none">
                     {% for post in site.posts %}
                         <div class="cards {{ post.filter }}">
-                            <a href="#{{ post.title }}" class="title" onclick="openModal('{{ post.title }}')">{{post.title}}</a>
+                            <a href="{{ post.url }}" class="title">{{ post.title }}</a>
                                 <div class="image_box">
                                     <img src="{{base.url}}/images/posts/{{post.img}}" class="img_all">
                         <p style="margin-bottom: auto; padding: inherit">{{ post.excerpt }}</p>

@@ -38,11 +38,11 @@ layout: sidbar_removed
                     <button class="btn active" onclick="filterSelection('all')">Show all</button>
                 </div>
 
-                <h3 style="padding-left: 20px">All Posts</h3>
+                <h3 style="padding-left: 20px; color: #5ad3fe">All Posts</h3>
                 <ul style="list-style-type: none">
                     {% for post in site.posts %}
                         <div class="cards {{ post.filter }}">
-                            <a href="#{{ post.title }}" class="title" onclick="openModal('{{ post.title }}')">{{post.title}}</a>
+                            <a href="{{ post.url }}" class="title">{{ post.title }}</a>
                                 <div class="image_box">
                                     <img src="{{base.url}}/images/posts/{{post.img}}" class="img_all">
                         <p style="margin-bottom: auto; padding: inherit">{{ post.excerpt }}</p>
@@ -77,32 +77,4 @@ for(var i = 0; i < btns.length; i++){
     });
 }
 
-function closeModal(title){
-    var modal = document.getElementById(title);
-    modal.className = "Modal is-hidden is-visuallyHidden";
-    document.getElementById("main").classList.remove("is-blurred");
-    //document.getElementById("header").classList.add("is-blurred");
-}
-
-function openModal(title) {                                                     
-    var modal = document.getElementById(title);                                 
-    var container = document.getElementById("main");                            
-    modal.className = "Modal is-visuallyHidden";                                
-    setTimeout(function() {                                                     
-        document.getElementById("main").classList.add("is-blurred");            
-        //document.getElementById("header").classList.add("is-blurred");          
-        modal.className = "Modal";                                              
-    }, 50);                                                                     
-}                                                                               
-                                                                                
-window.onclick = function(event) {                                              
-    console.log(event.target.className);                                        
-    console.log(event.target.classList);                                        
-    if (event.target.className == "Modal") {                                    
-        event.target.className = "Modal is-hidden is-visuallyHidden";           
-        document.getElementById("main").classList.remove("is-blurred");         
-        //document.getElementById("header").classList.remove("is-blurred");       
-    }                                                                           
-}                                                                               
-                                                                                
 </script>

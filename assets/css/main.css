@@ -2315,7 +2315,8 @@ input[type="button"],
   transition: 0.5s;
   border-radius: 10px;
   border-radius: 10px 10px 10px 10px;
-  width: 130%; }
+  width: auto;
+  margin-bottom: 8px; }
 
 .cards:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
@@ -2364,5 +2365,8 @@ input[type="button"],
 
   #titleBar .toggle {
     display: none; } }
+/* All blogs page view */
+.all-post-header {
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

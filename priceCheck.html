@@ -1,0 +1,262 @@
+---
+layout: sidbar_removed
+---
+
+<body>
+
+  <div class="loader">
+    <img src="/images/loading.gif" alt="Loading...">
+  </div>
+
+  <h3>Website Options</h3>
+  
+  <div class="total">
+    <p id="total-value"></p> 
+  </div>
+
+  <div id="dropdown-options">
+  
+    <label for="pages">Choose number of pages:</label>
+
+    <select id="pages" style="width: auto">
+      <option></option>
+      <option id="pages" value="2000" onclick="add('2000')">1</option>
+      <option id="pages" value="2500" onclick="add('2500')">2</option>
+      <option id="pages" value="3000" onclick="add('3000')">3</option>
+    </select>
+    
+    <label for="sign-in">Need Sign-in fucntion:</label>
+    
+    <select id="sign-in" style="width: auto">
+      <option></option>
+      <option id="sign-in" value="2500" onclick="add('2500')">Email Sign-in</option>
+      <option id="sign-in" value="3500" onclick="add('3500')">Social Sign-in</option>
+      <option id="sign-in" value="6000" onclick="add('6000')">Both</option>
+      <option id="sign-in" value="0" onclick="add('0')">No</option>
+    </select>
+    
+    <label for="profiles">Personal Profiles:</label>
+    
+    <select id="profiles" style="width: auto">
+      <option></option>
+      <option id="profiles" value="5000" onclick="add('5000')">Yes</option>
+      <option id="profiles" value="0" onclick="add('0')">No</option>
+    </select>
+
+    <label for="payment">Payment Gateway:</label>
+    
+    <select id="payment" style="width: auto">
+      <option></option>
+      <option id="payment" value="5000" onclick="add('5000')">Yes</option>
+      <option id="payment" value="0" onclick="add('0')">No</option>
+    </select>
+
+    <label for="review">Ratings/Reviews:</label>
+    
+    <select id="review" style="width: auto">
+      <option></option>
+      <option id="review" value="5000" onclick="add('5000')">Yes</option>
+      <option id="review" value="0" onclick="add('0')">No</option>
+    </select>
+
+    <label for="api">API for extrenal communication:</label>
+    
+    <select id="api" style="width: auto">
+      <option></option>
+      <option id="api" value="7500" onclick="add('7500')">Yes</option>
+      <option id="api" value="0" onclick="add('0')">No</option>
+    </select>
+    
+    <label for="search">Searching Functionality:</label>
+    
+    <select id="search" style="width: auto">
+      <option></option>
+      <option id="search" value="4000" onclick="add('4000')">Yes</option>
+      <option id="search" value="0" onclick="add('0')">No</option>
+    </select>
+    
+    <label for="cms">Content Mangment System:</label>
+    
+    <select id="cms" style="width: auto">
+      <option></option>
+      <option id="cms" value="4000" onclick="add('4000')">Yes</option>
+      <option id="cms" value="0" onclick="add('0')">No</option>
+    </select>
+
+    <label for="scheduling">Scheduling Service:</label>
+    
+    <select id="scheduling" style="width: auto">
+      <option></option>
+      <option id="scheduling" value="3000" onclick="add('3000')">Yes</option>
+      <option id="scheduling" value="0" onclick="add('0')">No</option>
+    </select>
+
+    <label for="design">Design:</label>
+    
+    <select id="desgin" style="width: auto">
+      <option></option>
+      <option id="desgin" value="2000" onclick="add('2000')">Basic Design</option>
+      <option id="desgin" value="3000" onclick="add('3000')">Basic Design and Mobile Responsive</option>
+      <option id="desgin" value="6000" onclick="add('6000')">Beautiful Design</option>
+      <option id="desgin" value="8000" onclick="add('8000')">Beautiful Design and Mobile Responsive</option>
+    </select>
+
+    <label for="news">Newsletter:</label>
+    
+    <select id="news" style="width: auto">
+      <option></option>
+      <option id="news" value="1000" onclick="add('1000')">Yes</option>
+      <option id="news" value="0" onclick="add('0')">No</option>
+    </select>
+ 
+  </div>
+  <!--
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Number of Pages</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Sign-in</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Email Sign-in</a>
+      <a href="#">Social Sign-in</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Person Profiles</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Yes</a>
+      <a href="#">No</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Payment Gateway</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Yes</a>
+      <a href="#">No</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Reviews</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Yes</a>
+      <a href="#">No</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">API</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Yes</a>
+      <a href="#">No</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Searching Functionality</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Yes</a>
+      <a href="#">No</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Content Magement System</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Yes</a>
+      <a href="#">No</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Scheduling Service</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Yes</a>
+      <a href="#">No</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Design</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Basic Design</a>
+      <a href="#">Beautiful Design</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Newsletter</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Yes</a>
+      <a href="#">No</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Animations</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Yes</a>
+      <a href="#">No</a>
+    </div>
+  </div>
+-->
+</body>
+
+<script>
+
+  var sum = 0;
+  const sum_tracker = {};
+  sessionStorage.setItem('total', sum);  
+
+  function add(){
+    var event_id = event.target.id
+    var event_value = parseInt(event.target.value);
+    var current_total = parseInt(sessionStorage.total);
+    
+    if( Object.entries(sum_tracker).length === 0){
+        sum_tracker[event_id] = event_value;
+        sessionStorage.total = event_value;
+    }
+    else{
+      for(var id in sum_tracker){
+        if(id == event_id){
+          subtract_from_total(sum_tracker[id], current_total);
+          current_total = parseInt(sessionStorage.total);
+          delete sum_tracker.id
+          sum_tracker[event_id] = event_value;
+        }
+      }
+      add_to_total(event_value, current_total);
+      sum_tracker[event_id] = event_value;
+    }
+    document.getElementById("total-value").innerHTML = sessionStorage.total;
+  }
+
+  function add_to_total(to_add, current_total){
+    sessionStorage.total = to_add + current_total;
+  }
+
+  function subtract_from_total(to_subtract, current_total){
+    var check = current_total - to_subtract;
+    if(check < 0){
+      sessionStorage.total = to_subtract;
+    }
+    sessionStorage.total = current_total - to_subtract;
+  }
+
+  if(performance.navigation.type == performance.navigation.TYPE_RELOAD){
+      var child = document.getElementById("dropdown-options").childNodes;
+      for(var i =0; i <child.length; i++){
+        child[i].selectedIndex = 0;
+      }
+  }
+    
+</script>

@@ -8611,3 +8611,12 @@ h1, h2, h3, h4, h5, h6,
     z-index: -1; }
   .backdrop.card {
     z-index: initial; }
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  margin-top: -3px;
+  /* if you want it vertically middle of the navbar. */ }

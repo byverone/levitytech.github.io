@@ -8612,6 +8612,7 @@ h1, h2, h3, h4, h5, h6,
   .backdrop.card {
     z-index: initial; }
 
+<<<<<<< HEAD
 .lm-images {
   max-width: 50%;
   height: auto;
@@ -8672,3 +8673,13 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 1em;
   margin: 1.5em;
   font-size: 1.4em; }
+=======
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  margin-top: -3px;
+  /* if you want it vertically middle of the navbar. */ }
+>>>>>>> b89ea873e9bcc139d9af87e9c1adf19d0dc9ba81

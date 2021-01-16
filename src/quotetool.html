@@ -5,130 +5,173 @@
 	<link href="css/identity.min.css" rel="stylesheet">
 
 	<title>Pricing</title>
+<style type="text/css">
+    #total-value::before { content: "$" }
+    #total-value { font-weight: bold }
+</style>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-scrollstyle bg-light shadow-sm">
+        <div class="container">
+            <div>
+                <img class="logo" src="img/logo.png"/>
+                <a class="navbar-brand font-weight-bold" href="https://www.levitytech.net">Levity</a>
+            </div>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-  <h3 style="text-align: center; color: #5ad3fe; padding-top: 1em; font-size: 2.2em">Levity Quote Tool</h3>
-  
-  <div class="price-head">
-    <div class="total">
-      <p id="total-value"></p> 
-    </div>
+
+            <div class="collapse navbar-collapse" id="navbarMainCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/quotetool" target="_blank">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/learnmore" target="_blank">About</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="https://github.com/levitytech" target="_blank"><i data-feather="github"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="https://calendly.com/bazyl/" target="_blank">Schedule a Meeting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- /end of navbar -->
+
+    <!-- Hero content -->
+    <div class="container flex-grow-1 d-flex justify-content-center align-items-center position-relative pt-5">
+        
+        <div class="content py-5">
+
+          <div class="price-head">
+            <div class="total">
+              <p id="total-value"></p> 
+            </div>
+          </div>
+
+            <!-- <div class="reset_button">
+              <button onclick="reset()">Reset</button>
+            </div>
+          </div> -->
+          <div id="dropdown-options">
+          
+            <label for="pages" class="dropdown-text pages" onmouseover="idfunction(this)">Choose number of pages</label>
+            <div class="popuptext" id="pages">1-3 pages of information and content about you, your business or your product. This content is limited to all standard html elements which include but not limited to text, images and buttons. Navigation between the pages will also be included between the pages and will be discussed with the customer. After 3 pages of content, each page will cost an additional $500. </div>
+
+            <select id="pages" class="dropdown-box" >
+              <option id="pages" value="0" onclick="add('0')"></option>
+              <option id="pages" value="2000" onclick="add('2000')">1-3</option>
+              <option id="pages" value="4000" onclick="add('4000')">4-7</option>
+              <option id="pages" value="5500" onclick="add('5500')">8-10</option>
+            </select>
+            
+            <label for="contact" class="dropdown-text contact" onmouseover="idfunction(this)">Contact Form</label>
+            
+            <div class="popuptext" id="contact"> A way for people to email you directly from your website. This would also include adding any other contact information so people can get a hold of you. This requires an SMTP protocol for sending emails meaning you must either purchase the CMS as well or have a domain of your own set up.
+         </div> 
+            
+            <select id="contact" class="dropdown-box">
+              <option id="contact" value="0" onclick="add('0')"></option>
+              <option id="contact" value="1000" onclick="add('1000')">Yes</option>
+              <option id="contact" value="0" onclick="add('0')">No</option>
+            </select>
+            
+            <label for="profiles" class="dropdown-text profiles" onmouseover="idfunction(this)">Personal Profiles</label>
+            
+            <div class="popuptext" id="profiles"> A personalized way for users to engage with your website and update information on their profile themselves. This is useful if you expect users to come back to your website often and they need to modify their settings, view support tickets they’ve submitted, update forum posts or manage subscriptions. </div>  
+            
+            <select id="profiles" class="dropdown-box" >
+              <option id="profiles" value="0" onclick="add('0')"></option>
+              <option id="profiles" value="5000" onclick="add('5000')">Yes</option>
+              <option id="profiles" value="0" onclick="add('0')">No</option>
+            </select>
+
+            <label for="payment" class="dropdown-text payment" onmouseover="idfunction(this)">Payment Gateway</label>
+
+            <div class="popuptext" id="payment">A way that people can purchase items from your website, pay for subscription fees or handle invoices. This will include an extra page, form for payment information and checkout flow to close the sale. Currently our team works with Stripe integration which is the business standard. We have experience with Paypal and Braintree and can implement them for an additional fee so we would advise customers to go with Stripe. </div>
+            
+            <select id="payment" class="dropdown-box" >
+              <option id="payment" value="0" onclick="add('0')"></option>
+              <option id="payment" value="5000" onclick="add('5000')">Yes</option>
+              <option id="payment" value="0" onclick="add('0')">No</option>
+            </select>
+
+            <label for="review" class="dropdown-text review" onmouseover="idfunction(this)">Ratings/Reviews</label>
+            <div class="popuptext" id="review"> A way for customers to share their opinions on products, testimonials or photos. Ratings and reviews will be placed on the products or users with an option to populate your landing page with the best reviews. </div>
+            <select id="review" class="dropdown-box" >
+              <option id="review" value="0" onclick="add('0')"></option>
+              <option id="review" value="5000" onclick="add('5000')">Yes</option>
+              <option id="review" value="0" onclick="add('0')">No</option>
+            </select>
+
+            <label for="api" class="dropdown-text api" onmouseover="idfunction(this)">API for extrenal communication</label>
+            <div class="popuptext" id="api"> An external or open API is an API designed for access by a larger population as well as web developers. Having an external API will give your website additional functionality to integrate other software into your website or have your information integrated onto a different website. Not all API’s are the same, and depending on what the customer needs prices may change. </div>
+            <select id="api" class="dropdown-box" >
+              <option id="api" value="0" onclick="add('0')"></option>
+              <option id="api" value="7500" onclick="add('7500')">Yes</option>
+              <option id="api" value="0" onclick="add('0')">No</option>
+            </select>
+            
+            <label for="search" class="dropdown-text search" onmouseover="idfunction(this)">Searching Functionality</label>
+            <div class="popuptext" id="search"> A way to browse your sites catalogs in a neat and organized way. This is useful if you want users to be able to find information about a certain product or topic quickly and efficiently.This searching functionality is linked to a single page, site-wide search functionality will be an extra cost of $2,000. </div> 
+            <select id="search" class="dropdown-box" >
+              <option id="search" value="0" onclick="add('0')"></option>
+              <option id="search" value="4000" onclick="add('4000')">Yes</option>
+              <option id="search" value="0" onclick="add('0')">No</option>
+            </select>
+            
+            <label for="cms" class="dropdown-text cms" onmouseover="idfunction(this)">Content Mangment System</label>
+            <div class="popuptext" id="cms"> A way to update and edit your website yourself without knowing any code. You will still need to know your site layout and we have people on the team who can assist with getting familiar. From here you will be able to decide if you want to add extra features yourself even. You will have to learn how this system works. Meaning it will be less cost for you to maintain long term, but more work. </div>
+            <select id="cms" class="dropdown-box" >
+              <option id="cms" value="0" onclick="add('0')"></option>
+              <option id="cms" value="4000" onclick="add('4000')">Yes</option>
+              <option id="cms" value="0" onclick="add('0')">No</option>
+            </select>
+
+            <label for="scheduling" class="dropdown-text scheduling" onmouseover="idfunction(this)">Scheduling Service</label>
+            <div class="popuptext" id="scheduling">A way that people can schedule appointments on your website. When an appointment is scheduled it will automatically be emailed to you for approval. Once approved appointments will show up on the website as a busy time slot, meaning no one else can book an appointment at that time.</div> 
+            <select id="scheduling" class="dropdown-box" >
+              <option id="scheduling" value="0" onclick="add('0')"></option>
+              <option id="scheduling" value="3000" onclick="add('3000')">Yes</option>
+              <option id="scheduling" value="0" onclick="add('0')">No</option>
+            </select>
+            
+            
+            <label for="sign-in" class="dropdown-text sign-in" onmouseover="idfunction(this)">Need Sign-in fucntion</label>
+
+            <div class="popuptext" id="sign-in">Email: A way for users to log into your website and access additional features they wouldn’t normally be able to access. This will save state for any information they input into your website such as location and payment information. Customers are creating an account on your website with their personal emails. Social: A way for users to log into your website through social media accounts, google or apple in order to access additional features. This will save state for any information they input into your website such as location and payment information.</div>
+
+            <select id="sign-in" class="dropdown-box" >
+              <option id="sign-in" value="0" onclick="add('0')"></option>
+              <option id="sign-in" value="2500" onclick="add('2500')">Email Sign-in</option>
+              <option id="sign-in" value="3500" onclick="add('3500')">Social Sign-in</option>
+              <option id="sign-in" value="6000" onclick="add('6000')">Both</option>
+              <option id="sign-in" value="0" onclick="add('0')">No</option>
+            </select>
+
+
+
+            <label for="design" class="dropdown-text">Design</label>
+            
+            <select id="desgin" class="dropdown-box" >
+              <option id="desgin" value="0" onclick="add('0')"></option>
+              <option id="desgin" value="2000" onclick="add('2000')">Basic Design</option>
+              <option id="desgin" value="3000" onclick="add('3000')">Basic Design and Mobile Responsive</option>
+              <option id="desgin" value="6000" onclick="add('6000')">Beautiful Design</option>
+              <option id="desgin" value="8000" onclick="add('8000')">Beautiful Design and Mobile Responsive</option>
+            </select>
+         
+          </div>
+      </div>
   </div>
 
-    <!-- <div class="reset_button">
-      <button onclick="reset()">Reset</button>
-    </div>
-  </div> -->
-  <div id="dropdown-options">
-  
-    <label for="pages" class="dropdown-text pages" onmouseover="idfunction(this)">Choose number of pages</label>
-    <div class="popuptext" id="pages">1-3 pages of information and content about you, your business or your product. This content is limited to all standard html elements which include but not limited to text, images and buttons. Navigation between the pages will also be included between the pages and will be discussed with the customer. After 3 pages of content, each page will cost an additional $500. </div>
-
-    <select id="pages" class="dropdown-box" >
-      <option id="pages" value="0" onclick="add('0')"></option>
-      <option id="pages" value="2000" onclick="add('2000')">1-3</option>
-      <option id="pages" value="4000" onclick="add('4000')">4-7</option>
-      <option id="pages" value="5500" onclick="add('5500')">8-10</option>
-    </select>
-    
-    <label for="contact" class="dropdown-text contact" onmouseover="idfunction(this)">Contact Form</label>
-    
-    <div class="popuptext" id="contact"> A way for people to email you directly from your website. This would also include adding any other contact information so people can get a hold of you. This requires an SMTP protocol for sending emails meaning you must either purchase the CMS as well or have a domain of your own set up.
- </div> 
-    
-    <select id="contact" class="dropdown-box">
-      <option id="contact" value="0" onclick="add('0')"></option>
-      <option id="contact" value="1000" onclick="add('1000')">Yes</option>
-      <option id="contact" value="0" onclick="add('0')">No</option>
-    </select>
-    
-    <label for="profiles" class="dropdown-text profiles" onmouseover="idfunction(this)">Personal Profiles</label>
-    
-    <div class="popuptext" id="profiles"> A personalized way for users to engage with your website and update information on their profile themselves. This is useful if you expect users to come back to your website often and they need to modify their settings, view support tickets they’ve submitted, update forum posts or manage subscriptions. </div>  
-    
-    <select id="profiles" class="dropdown-box" >
-      <option id="profiles" value="0" onclick="add('0')"></option>
-      <option id="profiles" value="5000" onclick="add('5000')">Yes</option>
-      <option id="profiles" value="0" onclick="add('0')">No</option>
-    </select>
-
-    <label for="payment" class="dropdown-text payment" onmouseover="idfunction(this)">Payment Gateway</label>
-
-    <div class="popuptext" id="payment">A way that people can purchase items from your website, pay for subscription fees or handle invoices. This will include an extra page, form for payment information and checkout flow to close the sale. Currently our team works with Stripe integration which is the business standard. We have experience with Paypal and Braintree and can implement them for an additional fee so we would advise customers to go with Stripe. </div>
-    
-    <select id="payment" class="dropdown-box" >
-      <option id="payment" value="0" onclick="add('0')"></option>
-      <option id="payment" value="5000" onclick="add('5000')">Yes</option>
-      <option id="payment" value="0" onclick="add('0')">No</option>
-    </select>
-
-    <label for="review" class="dropdown-text review" onmouseover="idfunction(this)">Ratings/Reviews</label>
-    <div class="popuptext" id="review"> A way for customers to share their opinions on products, testimonials or photos. Ratings and reviews will be placed on the products or users with an option to populate your landing page with the best reviews. </div>
-    <select id="review" class="dropdown-box" >
-      <option id="review" value="0" onclick="add('0')"></option>
-      <option id="review" value="5000" onclick="add('5000')">Yes</option>
-      <option id="review" value="0" onclick="add('0')">No</option>
-    </select>
-
-    <label for="api" class="dropdown-text api" onmouseover="idfunction(this)">API for extrenal communication</label>
-    <div class="popuptext" id="api"> An external or open API is an API designed for access by a larger population as well as web developers. Having an external API will give your website additional functionality to integrate other software into your website or have your information integrated onto a different website. Not all API’s are the same, and depending on what the customer needs prices may change. </div>
-    <select id="api" class="dropdown-box" >
-      <option id="api" value="0" onclick="add('0')"></option>
-      <option id="api" value="7500" onclick="add('7500')">Yes</option>
-      <option id="api" value="0" onclick="add('0')">No</option>
-    </select>
-    
-    <label for="search" class="dropdown-text search" onmouseover="idfunction(this)">Searching Functionality</label>
-    <div class="popuptext" id="search"> A way to browse your sites catalogs in a neat and organized way. This is useful if you want users to be able to find information about a certain product or topic quickly and efficiently.This searching functionality is linked to a single page, site-wide search functionality will be an extra cost of $2,000. </div> 
-    <select id="search" class="dropdown-box" >
-      <option id="search" value="0" onclick="add('0')"></option>
-      <option id="search" value="4000" onclick="add('4000')">Yes</option>
-      <option id="search" value="0" onclick="add('0')">No</option>
-    </select>
-    
-    <label for="cms" class="dropdown-text cms" onmouseover="idfunction(this)">Content Mangment System</label>
-    <div class="popuptext" id="cms"> A way to update and edit your website yourself without knowing any code. You will still need to know your site layout and we have people on the team who can assist with getting familiar. From here you will be able to decide if you want to add extra features yourself even. You will have to learn how this system works. Meaning it will be less cost for you to maintain long term, but more work. </div>
-    <select id="cms" class="dropdown-box" >
-      <option id="cms" value="0" onclick="add('0')"></option>
-      <option id="cms" value="4000" onclick="add('4000')">Yes</option>
-      <option id="cms" value="0" onclick="add('0')">No</option>
-    </select>
-
-    <label for="scheduling" class="dropdown-text scheduling" onmouseover="idfunction(this)">Scheduling Service</label>
-    <div class="popuptext" id="scheduling">A way that people can schedule appointments on your website. When an appointment is scheduled it will automatically be emailed to you for approval. Once approved appointments will show up on the website as a busy time slot, meaning no one else can book an appointment at that time.</div> 
-    <select id="scheduling" class="dropdown-box" >
-      <option id="scheduling" value="0" onclick="add('0')"></option>
-      <option id="scheduling" value="3000" onclick="add('3000')">Yes</option>
-      <option id="scheduling" value="0" onclick="add('0')">No</option>
-    </select>
-    
-    
-    <label for="sign-in" class="dropdown-text sign-in" onmouseover="idfunction(this)">Need Sign-in fucntion</label>
-
-    <div class="popuptext" id="sign-in">Email: A way for users to log into your website and access additional features they wouldn’t normally be able to access. This will save state for any information they input into your website such as location and payment information. Customers are creating an account on your website with their personal emails. Social: A way for users to log into your website through social media accounts, google or apple in order to access additional features. This will save state for any information they input into your website such as location and payment information.</div>
-
-    <select id="sign-in" class="dropdown-box" >
-      <option id="sign-in" value="0" onclick="add('0')"></option>
-      <option id="sign-in" value="2500" onclick="add('2500')">Email Sign-in</option>
-      <option id="sign-in" value="3500" onclick="add('3500')">Social Sign-in</option>
-      <option id="sign-in" value="6000" onclick="add('6000')">Both</option>
-      <option id="sign-in" value="0" onclick="add('0')">No</option>
-    </select>
-
-
-
-    <label for="design" class="dropdown-text">Design</label>
-    
-    <select id="desgin" class="dropdown-box" >
-      <option id="desgin" value="0" onclick="add('0')"></option>
-      <option id="desgin" value="2000" onclick="add('2000')">Basic Design</option>
-      <option id="desgin" value="3000" onclick="add('3000')">Basic Design and Mobile Responsive</option>
-      <option id="desgin" value="6000" onclick="add('6000')">Beautiful Design</option>
-      <option id="desgin" value="8000" onclick="add('8000')">Beautiful Design and Mobile Responsive</option>
-    </select>
- 
-  </div>
 
 <section id="contact" class="py-5">
 		
@@ -236,7 +279,6 @@
 	<script src="lib/popper.min.js"></script> <!-- Popper.js - dependency of Bootstrap -->
 	<script src="js/plugins.min.js"></script> <!-- Load plugins -->
 	<script src="js/main.min.js"></script> <!-- Other javascript -->
-
 </body>
 
 <script>

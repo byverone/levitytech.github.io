@@ -1,0 +1,399 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=deivce-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="css/identity.min.css" rel="stylesheet">
+
+	<title>Pricing</title>
+<style type="text/css">
+    #total-value::before { content: "$" }
+    #total-value { font-weight: bold }
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-scrollstyle bg-light shadow-sm">
+        <div class="container">
+            <div>
+                <img class="logo" src="img/logo.png"/>
+                <a class="navbar-brand font-weight-bold" href="https://www.levitytech.net">Levity</a>
+            </div>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarMainCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/quotetool" target="_blank">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/learnmore" target="_blank">About</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="https://github.com/levitytech" target="_blank"><i data-feather="github"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="https://calendly.com/bazyl/" target="_blank">Schedule a Meeting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- /end of navbar -->
+
+    <!-- Hero content -->
+    <div class="container flex-grow-1 d-flex justify-content-center align-items-center position-relative pt-5">
+        
+        <div class="content py-5">
+
+          <div class="price-head">
+            <div class="total">
+              <p id="total-value"></p> 
+            </div>
+          </div>
+
+            <!-- <div class="reset_button">
+              <button onclick="reset()">Reset</button>
+            </div>
+          </div> -->
+          <div id="dropdown-options">
+          
+            <label for="pages" class="dropdown-text pages" onmouseover="idfunction(this)">Choose number of pages</label>
+            <div class="popuptext" id="pages">1-3 pages of information and content about you, your business or your product. This content is limited to all standard html elements which include but not limited to text, images and buttons. Navigation between the pages will also be included between the pages and will be discussed with the customer. After 3 pages of content, each page will cost an additional $500. </div>
+
+            <select id="pages" class="dropdown-box" >
+              <option id="pages" value="0" onclick="add('0')"></option>
+              <option id="pages" value="2000" onclick="add('2000')">1-3</option>
+              <option id="pages" value="4000" onclick="add('4000')">4-7</option>
+              <option id="pages" value="5500" onclick="add('5500')">8-10</option>
+            </select>
+            
+            <label for="contact" class="dropdown-text contact" onmouseover="idfunction(this)">Contact Form</label>
+            
+            <div class="popuptext" id="contact"> A way for people to email you directly from your website. This would also include adding any other contact information so people can get a hold of you. This requires an SMTP protocol for sending emails meaning you must either purchase the CMS as well or have a domain of your own set up.
+         </div> 
+            
+            <select id="contact" class="dropdown-box">
+              <option id="contact" value="0" onclick="add('0')"></option>
+              <option id="contact" value="1000" onclick="add('1000')">Yes</option>
+              <option id="contact" value="0" onclick="add('0')">No</option>
+            </select>
+            
+            <label for="profiles" class="dropdown-text profiles" onmouseover="idfunction(this)">Personal Profiles</label>
+            
+            <div class="popuptext" id="profiles"> A personalized way for users to engage with your website and update information on their profile themselves. This is useful if you expect users to come back to your website often and they need to modify their settings, view support tickets they’ve submitted, update forum posts or manage subscriptions. </div>  
+            
+            <select id="profiles" class="dropdown-box" >
+              <option id="profiles" value="0" onclick="add('0')"></option>
+              <option id="profiles" value="5000" onclick="add('5000')">Yes</option>
+              <option id="profiles" value="0" onclick="add('0')">No</option>
+            </select>
+
+            <label for="payment" class="dropdown-text payment" onmouseover="idfunction(this)">Payment Gateway</label>
+
+            <div class="popuptext" id="payment">A way that people can purchase items from your website, pay for subscription fees or handle invoices. This will include an extra page, form for payment information and checkout flow to close the sale. Currently our team works with Stripe integration which is the business standard. We have experience with Paypal and Braintree and can implement them for an additional fee so we would advise customers to go with Stripe. </div>
+            
+            <select id="payment" class="dropdown-box" >
+              <option id="payment" value="0" onclick="add('0')"></option>
+              <option id="payment" value="5000" onclick="add('5000')">Yes</option>
+              <option id="payment" value="0" onclick="add('0')">No</option>
+            </select>
+
+            <label for="review" class="dropdown-text review" onmouseover="idfunction(this)">Ratings/Reviews</label>
+            <div class="popuptext" id="review"> A way for customers to share their opinions on products, testimonials or photos. Ratings and reviews will be placed on the products or users with an option to populate your landing page with the best reviews. </div>
+            <select id="review" class="dropdown-box" >
+              <option id="review" value="0" onclick="add('0')"></option>
+              <option id="review" value="5000" onclick="add('5000')">Yes</option>
+              <option id="review" value="0" onclick="add('0')">No</option>
+            </select>
+
+            <label for="api" class="dropdown-text api" onmouseover="idfunction(this)">API for extrenal communication</label>
+            <div class="popuptext" id="api"> An external or open API is an API designed for access by a larger population as well as web developers. Having an external API will give your website additional functionality to integrate other software into your website or have your information integrated onto a different website. Not all API’s are the same, and depending on what the customer needs prices may change. </div>
+            <select id="api" class="dropdown-box" >
+              <option id="api" value="0" onclick="add('0')"></option>
+              <option id="api" value="7500" onclick="add('7500')">Yes</option>
+              <option id="api" value="0" onclick="add('0')">No</option>
+            </select>
+            
+            <label for="search" class="dropdown-text search" onmouseover="idfunction(this)">Searching Functionality</label>
+            <div class="popuptext" id="search"> A way to browse your sites catalogs in a neat and organized way. This is useful if you want users to be able to find information about a certain product or topic quickly and efficiently.This searching functionality is linked to a single page, site-wide search functionality will be an extra cost of $2,000. </div> 
+            <select id="search" class="dropdown-box" >
+              <option id="search" value="0" onclick="add('0')"></option>
+              <option id="search" value="4000" onclick="add('4000')">Yes</option>
+              <option id="search" value="0" onclick="add('0')">No</option>
+            </select>
+            
+            <label for="cms" class="dropdown-text cms" onmouseover="idfunction(this)">Content Mangment System</label>
+            <div class="popuptext" id="cms"> A way to update and edit your website yourself without knowing any code. You will still need to know your site layout and we have people on the team who can assist with getting familiar. From here you will be able to decide if you want to add extra features yourself even. You will have to learn how this system works. Meaning it will be less cost for you to maintain long term, but more work. </div>
+            <select id="cms" class="dropdown-box" >
+              <option id="cms" value="0" onclick="add('0')"></option>
+              <option id="cms" value="4000" onclick="add('4000')">Yes</option>
+              <option id="cms" value="0" onclick="add('0')">No</option>
+            </select>
+
+            <label for="scheduling" class="dropdown-text scheduling" onmouseover="idfunction(this)">Scheduling Service</label>
+            <div class="popuptext" id="scheduling">A way that people can schedule appointments on your website. When an appointment is scheduled it will automatically be emailed to you for approval. Once approved appointments will show up on the website as a busy time slot, meaning no one else can book an appointment at that time.</div> 
+            <select id="scheduling" class="dropdown-box" >
+              <option id="scheduling" value="0" onclick="add('0')"></option>
+              <option id="scheduling" value="3000" onclick="add('3000')">Yes</option>
+              <option id="scheduling" value="0" onclick="add('0')">No</option>
+            </select>
+            
+            
+            <label for="sign-in" class="dropdown-text sign-in" onmouseover="idfunction(this)">Need Sign-in fucntion</label>
+
+            <div class="popuptext" id="sign-in">Email: A way for users to log into your website and access additional features they wouldn’t normally be able to access. This will save state for any information they input into your website such as location and payment information. Customers are creating an account on your website with their personal emails. Social: A way for users to log into your website through social media accounts, google or apple in order to access additional features. This will save state for any information they input into your website such as location and payment information.</div>
+
+            <select id="sign-in" class="dropdown-box" >
+              <option id="sign-in" value="0" onclick="add('0')"></option>
+              <option id="sign-in" value="2500" onclick="add('2500')">Email Sign-in</option>
+              <option id="sign-in" value="3500" onclick="add('3500')">Social Sign-in</option>
+              <option id="sign-in" value="6000" onclick="add('6000')">Both</option>
+              <option id="sign-in" value="0" onclick="add('0')">No</option>
+            </select>
+
+
+
+            <label for="design" class="dropdown-text">Design</label>
+            
+            <select id="desgin" class="dropdown-box" >
+              <option id="desgin" value="0" onclick="add('0')"></option>
+              <option id="desgin" value="2000" onclick="add('2000')">Basic Design</option>
+              <option id="desgin" value="3000" onclick="add('3000')">Basic Design and Mobile Responsive</option>
+              <option id="desgin" value="6000" onclick="add('6000')">Beautiful Design</option>
+              <option id="desgin" value="8000" onclick="add('8000')">Beautiful Design and Mobile Responsive</option>
+            </select>
+         
+          </div>
+      </div>
+  </div>
+
+
+<section id="contact" class="py-5">
+		
+		<div class="container">
+			
+			<div class="row">
+			    <div class="col-md-8 mx-auto text-center">
+
+			        <h1 class="mb-5" style="position: absolute; margin-left: 55%">Get in touch</h1>
+					
+					<div class="row pb-5">
+						<div class="col-lg-6 mt-5">
+							<div class="card border-0 bg-light rounded-lg backdrop">
+								<div class="card-body">
+									<h4 class="card-title">
+										<i data-feather="phone" class="text-primary"></i>
+										Give us a call
+									</h4>
+									<h5 class="font-weight-lighter">712 291 5252</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 mt-5">
+							<div class="card border-0 bg-light rounded-lg backdrop">
+								<div class="card-body">
+									<h4 class="card-title">
+										<i data-feather="mail" class="text-primary"></i>
+										Shoot us a message
+									</h4>
+									<h5 class="font-weight-lighter">bazyl@levitytech.net</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			    </div>
+
+			    <div class="col-md-4 d-flex align-items-end py-3">
+
+			    	<img src="img/undraw_contact_us_15o2.svg" alt="" class="img-fluid">
+
+			    </div> <!-- /end of column -->
+
+			</div> <!-- /end of row -->
+
+
+	</section>
+
+
+
+	<!-- Footer -->
+	<footer class="bg-light py-3">
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-4 mt-3">
+					<h5 class="mb-3">Levity</h5>
+					<p>
+						We're a company located in Storm Lake, Iowa with the goal of igniting entrepreneurship through rapid prototyping using leading technologies.
+					</p>
+				</div>
+				<div class="col-md-4 mt-3">
+					<h5 class="mb-3">Links</h5>
+					<ul class="list-unstyled">
+						<li>
+							<a href="https://www.bvu.edu/news/computer-science-majors-build-mobile-app">Our Roots</a>
+						</li>
+						<li>
+							<a href="https://www.google.com/maps/place/524+Lake+Ave+N,+Storm+Lake,+IA+50588/@42.6442342,-95.2034803,17z/data=!4m5!3m4!1s0x878d4f14106c7153:0x6bafa1220d930a99!8m2!3d42.6442303!4d-95.2012863">Directions</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="col-md-4 mt-3 text-center">
+					<h5 class="mb-3">Connect with us</h5>
+					<a href="https://www.facebook.com/levitytech/" target="_blank" class="btn text-primary m-1">
+						<i data-feather="facebook"></i>
+						<span class="sr-only">Facebook</span>
+					</a>
+					<a href="https://github.com/levitytech" target="_blank" class="btn text-primary m-1">
+						<i data-feather="github"></i>
+						<span class="sr-only">GitHub</span>
+					</a>
+					<br>
+					<a href="https://levitytech.net" target="_blank">levitytech.net</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<hr class="border-primary">
+
+			<h6 class=" text-muted text-center font-weight-lighter">
+				© 2020 Copyright Levity, LLC
+			</h6>
+
+		</div>
+
+	</footer>
+
+
+	<script src="lib/jquery.min.js"></script> <!-- jQuery -->
+	<script src="lib/popper.min.js"></script> <!-- Popper.js - dependency of Bootstrap -->
+	<script src="js/plugins.min.js"></script> <!-- Load plugins -->
+	<script src="js/main.min.js"></script> <!-- Other javascript -->
+</body>
+
+<script>
+
+  var sum = 0;
+  const sum_tracker = {};
+  sessionStorage.setItem('total', sum);  
+
+  function add(){
+    var event_id = event.target.id
+    var event_value = parseInt(event.target.value);
+    var current_total = parseInt(sessionStorage.total);
+    
+    if( Object.entries(sum_tracker).length === 0){
+        sum_tracker[event_id] = event_value;
+        sessionStorage.total = event_value;
+    }
+    else{
+      for(var id in sum_tracker){
+        if(id == event_id){
+          subtract_from_total(sum_tracker[id], current_total);
+          current_total = parseInt(sessionStorage.total);
+          delete sum_tracker.id
+          sum_tracker[event_id] = event_value;
+        }
+      }
+      add_to_total(event_value, current_total);
+      sum_tracker[event_id] = event_value;
+    }
+    document.getElementById("total-value").innerHTML = sessionStorage.total;
+  }
+
+  function add_to_total(to_add, current_total){
+    sessionStorage.total = to_add + current_total;
+  }
+
+  function subtract_from_total(to_subtract, current_total){
+    var check = current_total - to_subtract;
+    if(check < 0){
+      sessionStorage.total = to_subtract;
+    }
+    sessionStorage.total = current_total - to_subtract;
+  }
+
+  function reset(){
+    sessionStorage.total = 0;
+    document.getElementById("total-value").innerHTML = sessionStorage.total;
+      for(const id in sum_tracker){
+      delete sum_tracker[id];
+    }
+    var child = document.getElementById("dropdown-options").childNodes;
+    for(var i =0; i <child.length; i++){
+      child[i].selectedIndex = 0;
+    }
+  }
+
+
+  if(performance.navigation.type == performance.navigation.TYPE_RELOAD){
+    reset();    
+  }
+  
+  var div_moving;
+  
+  var parent_div = 'dropdown-options';
+
+  var movingDiv = {
+      mouseXY: {},
+
+      getXYpos: function(elm) {
+          x = elm.offsetLeft;
+          y = elm.offsetTop;
+          elm = elm.offsetParent;
+          
+          while(elm != null){
+            x = parseInt(x) + parseInt(elm.offsetLeft);
+            y = parseInt(y) + parseInt(elm.offsetTop);
+            elm = elm.offsetParent;
+          }
+          
+          return {'xp':x, 'yp':y};
+        },
+
+      getCoords: function(e, flag) {
+        var xy_pos = this.getXYpos(e.target);
+
+        if(navigator.appVersion.indexOf("MSIE") != -1){
+          var standardBody = (document.compatMode == "CSS1Compat") ? documentElement : document.body;
+            x = event.clientX + standardBody.scrollLeft;
+            y = event.clientY + standardBody.scrollRight;
+        }
+        else{
+          x = e.pageX;
+          y = e.pageY;
+        }
+
+        x = x - xy_pos['xp'];
+        y = y - xy_pos['yp'];
+
+        return {'xp':x, 'yp':y};
+      }
+  };
+
+  document.getElementById(parent_div).addEventListener('mousemove', function(e){
+      mouseXY = movingDiv.getCoords(e);
+      div_moving.style.left = mouseXY.xp + 8 + 'px';
+      div_moving.style.top = mouseXY.yp - 8 + 'px';
+  });
+
+  function idfunction(elm){
+    console.log(elm.className);
+    var id = elm.className.split(" ")[1];
+    console.log(id);
+    div_moving = document.getElementById(id);
+    return id;
+  }
+    
+
+</script>

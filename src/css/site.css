@@ -1,12 +1,4 @@
 img.team-picture {
     object-fit: cover;
-    height: 20vh;
-}
-
-img.picture-martin {
-    object-position: 10% 100%;
-}
-
-img.picture-mitch {
-    object-position: 65% 100%;
+    height: auto;
 }

@@ -9,8 +9,14 @@
 </head>
 <body>
 
-	<div class="hero-wrapper vh-100 d-flex flex-column position-relative overflow-hidden">
 
+	<div class="hero-wrapper vh-100 d-flex flex-column position-relative overflow-hidden">
+		<script>
+			if (screen.width > 700) {
+				document.write('<div class="ball"></div>');
+			}
+		</script>
+		
 		<!-- Navbar -->
 		<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-scrollstyle bg-light shadow-sm">
 		    <div class="container">
@@ -28,9 +34,6 @@
 		            	<li class="nav-item">
 		            	    <a class="nav-link" href="/blog" target="_blank">Blog</a>
 		            	</li>
-		            	<li class="nav-item">
-		            	    <a class="nav-link" href="/quotetool" target="_blank">Pricing</a>
-		            	</li>
 		                <li class="nav-item">
 		                    <a class="nav-link" href="/learnmore" target="_blank">About</a>
 		                </li>
@@ -44,34 +47,245 @@
 		        </div>
 		    </div>
 		</nav> <!-- /end of navbar -->
+
+		<!-- Hero content -->
+		<div class="container flex-grow-1 d-flex justify-content-center align-items-center position-relative pt-5">
+			
+			<div class="content py-5">
+
+				<h1 class="display-3 font-weight-bold">
+					We create awesome <br>
+					<span id="typed"></span>
+					<div id="typed-strings">
+					    <p>web apps</p>
+					    <p>mobile apps</p>
+						<p>AI-driven solutions</p>
+						<p>game development</p>
+						<p>MVP's</p>
+						<p>blockchain contracts</p>
+						<p>product development</p>
+						<p>virtual reality</p>
+						<p>augmented reality</p>
+						<p>machine learning</p>
+						<p>e-commerce</p>
+					</div> 
+				</h1>
+				<h2 class="text-muted font-weight-lighter mt-3">And we'd love to get to know you.</h2>
+			
+				<div class="hero-drawing py-5 mx-auto">
+					<img src="img/undraw_Tree_swing_646s.svg" alt="Drawing hero" class="img-fluid">
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="scroller text-center pb-5">
+			<a href="#about" class="btn rounded-circle btn-outline-primary btn-scroller">
+				<i class="mt-1" data-feather="chevrons-down"></i><span class="sr-only">Scroll down</span>
+			</a>
+		</div>
+
+		<div class="ball ball-alt"></div>
+
 	</div>
 
   <div id="main">
-        <section id="Solutions">
-          <div class="container noborder">
-            <h3>Product Solutions</h3>
-            <p>We develop our client’s product at every step, so you don't have to! First, our team learns about your goals and works to understand your business as a whole. We use this knowledge to create a development plan that achieves each goal of your business. Next, our engineers dive into design, development, and finally a full-functioning deployment. With our top-notch engineering team, we take care of everything your CTO would.</p>
-            <img src="img/learnMore/ps.JPG" class="lm-images">
-            <img src="img/learnMore/ps_1.JPG" class="lm-images" style="float: right">
+        <section id="Solutions" class="bg-light py-5">
+          <div class="container">
+		  <div class="row text-center py-3 mt-5">
+		  	<div class="col-md-8 mx-auto">
+            			<h1 class="md-4">Product Solutions</h1>
+            				<p class ="lead text-justify">We develop our client’s product at every step, so you don't have to! First, our team learns about your goals and works to understand your business as a whole. We use this knowledge to create a development plan that achieves each goal of your business. Next, our engineers dive into design, development, and finally a full-functioning deployment. With our top-notch engineering team, we take care of everything your CTO would.</p>
+			</div>
+		</div>
+		<div class="row py-3 mb-5 justify-content-center">
+			<div class="col-md-4 mt-4">
+				<div class="card text-center border-0 position-relative">
+					<div class="card-img-top mx-auto backdrop">
+						<img src="img/learnMore/ps.JPG" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mt-4">
+				<div class="card text-center border-0 position-relative">
+					<div class="card-img-top mx-auto backdrop">
+            					<img src="img/learnMore/ps_1.JPG" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
           </div> 
         </section>
 
-        <section id="Innovation">
+        <section id="Innovation" class="py-5">
           <div class="container">
-            <h3>Innovation</h3>
-	    <!-- <img src="img/learnMore/in.JPG" class="lm-images" style="float: right"> -->
-            <p>We don't expect you to have all the answers every time, so we will also be there as a collaborative force in your idea synthesization. Our diligent team will work with clients on projects that require an extreme level of time and care to accomplish. From mobile to full-stack, to artificial intelligence, we have team members ready to handle these opportunities.</p> 
-          </div>
+		  <div class="col-md-8 mx-auto">
+            		<h1 class="mb-4">Innovation</h1>
+            			<p class="lead text-justify">We don't expect you to have all the answers every time, so we will also be there as a collaborative force in your idea synthesization. Our diligent team will work with clients on projects that require an extreme level of time and care to accomplish. From mobile to full-stack, to artificial intelligence, we have team members ready to handle these opportunities.</p> 
+          	  </div>
+		  <!-- end of col-->
+	  </div>
+        </section>
+	<!-- end of section-->
+
+        <section id="Strategy" class="bg-light py-5">
+          <div class="container">
+		  <div class="row py-3 mt-5">
+		  	<div class="col-md-8 mx-auto">
+            			<h1 class="mb-4">Strategy</h1>
+            				<p class="lead text-justify">Before we begin any development, we like to spend time discussing the challenges, goals, and ambitions our partners may face. As a consulting company, we understand the importance of truly aligning with our customers at multiple levels, rather than developing just to get it done quickly. By doing this, we set our partners up for long-term success. With an agile-fluent, and lean team means the product we build is always in the best interest of your business.</p>
+            		</div><!-- end of col-->
+		  </div><!-- end of row-->
+		  <div class="row py-3 mb-5 justify-content-center">
+			  <div class="col-md-4 mt-4">
+				<div class="card text-center border-0 position-relative">
+					<div class="card-img-top mx-auto backdrop">
+						<img src="img/learnMore/st.JPG" class="img-fluid">
+					</div>
+				</div>
+          		  </div> <!-- end of col-->
+		  </div> <!-- end of row-->
+	  </div>
         </section>
 
-        <section id="Strategy">
-          <div class="container">
-            <h3>Strategy</h3>
-            <p>Before we begin any development, we like to spend time discussing the challenges, goals, and ambitions our partners may face. As a consulting company, we understand the importance of truly aligning with our customers at multiple levels, rather than developing just to get it done quickly. By doing this, we set our partners up for long-term success. With an agile-fluent, and lean team means the product we build is always in the best interest of your business.</p>
-            <img src="img/learnMore/st.JPG" class="lm-images" style="display:flex; margin-left: auto; margin-right: auto">
-          </div>
-        </section>
+	<!-- Contact section -->
+	<section id="contact" class="py-5">
+		
+		<div class="container">
+			
+			<div class="row">
+			    <div class="col-md-8 mx-auto text-center">
 
-  </div>
+			        <h1 class="mb-5">Get in touch</h1>
+					
+					<div class="row pb-5">
+						<div class="col-lg-6 mt-5">
+							<div class="card border-0 bg-light rounded-lg backdrop">
+								<div class="card-body">
+									<h4 class="card-title">
+										<i data-feather="phone" class="text-primary"></i>
+										Give us a call
+									</h4>
+									<h5 class="font-weight-lighter">712 291 5252</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 mt-5">
+							<div class="card border-0 bg-light rounded-lg backdrop">
+								<div class="card-body">
+									<h4 class="card-title">
+										<i data-feather="mail" class="text-primary"></i>
+										Shoot us a message
+									</h4>
+									<h5 class="font-weight-lighter">bazyl@levitytech.net</h5>
+								</div>
+							</div>
+						</div>
+					</div>
 
+			    </div>
+
+			    <div class="col-md-4 d-flex align-items-end py-3">
+
+			    	<img src="img/undraw_contact_us_15o2.svg" alt="" class="img-fluid">
+
+			    </div> <!-- /end of column -->
+
+			</div> <!-- /end of row -->
+
+			<div class="row py-3">
+				<div class="col-md-6 mx-auto text-center">
+
+			        
+			        <div class="text-center">
+			            <p class="lead mt-3">Or follow us on</p>
+			            <a href="https://www.facebook.com/levitytech/" target="_blank" class="btn text-primary m-1">
+			            	<i data-feather="facebook"></i>
+			            	<span class="sr-only">Facebook</span>
+			            </a>
+			            <a href="https://github.com/levitytech" target="_blank" class="btn text-primary m-1">
+			            	<i data-feather="github"></i>
+			            	<span class="sr-only">GitHub</span>
+			            </a>
+			        </div>
+
+			        <h6 class="text-center mt-2">
+			        	<a href="https://levitytech.net" target="_blank">levitytech.net</a>
+			        </h6>					
+				</div>
+			</div> <!-- /end of row -->
+
+		</div>
+
+	</section>
+    </div>
+
+
+	<!-- Footer -->
+	<footer class="bg-light py-3">
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-4 mt-3">
+					<h5 class="mb-3">Levity</h5>
+					<p>
+						We're a company located in Storm Lake, Iowa with the goal of igniting entrepreneurship through rapid prototyping using leading technologies.
+					</p>
+				</div>
+				<div class="col-md-4 mt-3">
+					<h5 class="mb-3">Links</h5>
+					<ul class="list-unstyled">
+						<li>
+							<a href="https://www.bvu.edu/news/computer-science-majors-build-mobile-app">Our Roots</a>
+						</li>
+						<li>
+							<a href="https://www.google.com/maps/place/524+Lake+Ave+N,+Storm+Lake,+IA+50588/@42.6442342,-95.2034803,17z/data=!4m5!3m4!1s0x878d4f14106c7153:0x6bafa1220d930a99!8m2!3d42.6442303!4d-95.2012863">Directions</a>
+
+						</li>
+
+					</ul>
+				</div>
+				<div class="col-md-4 mt-3 text-center">
+					<h5 class="mb-3">Connect with us</h5>
+					<a href="https://www.facebook.com/levitytech/" target="_blank" class="btn text-primary m-1">
+						<i data-feather="facebook"></i>
+						<span class="sr-only">Facebook</span>
+					</a>
+					<a href="https://github.com/levitytech" target="_blank" class="btn text-primary m-1">
+						<i data-feather="github"></i>
+						<span class="sr-only">GitHub</span>
+					</a>
+					<br>
+					<a href="https://levitytech.net" target="_blank">levitytech.net</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<hr class="border-primary">
+
+			<h6 class=" text-muted text-center font-weight-lighter">
+				© 2020 Copyright Levity, LLC
+			</h6>
+
+		</div>
+
+	</footer>
+
+
+
+
+
+
+	<!-- Load required Javascript -->
+	<script src="lib/jquery.min.js"></script> <!-- jQuery -->
+	<script src="lib/popper.min.js"></script> <!-- Popper.js - dependency of Bootstrap -->
+
+	<script src="js/plugins.min.js"></script> <!-- Load plugins -->
+	
+	<script src="js/main.min.js"></script> <!-- Other javascript -->
+	
 </body>
+</html>

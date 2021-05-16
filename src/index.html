@@ -29,8 +29,11 @@
 
 
 	<div class="hero-wrapper vh-100 d-flex flex-column position-relative overflow-hidden">
-		
-		<div class="ball"></div>
+		<script>
+			if (screen.width > 700) {
+				document.write('<div class="ball"></div>');
+			}
+		</script>
 		
 		<!-- Navbar -->
 		<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-scrollstyle bg-light shadow-sm">
@@ -49,17 +52,14 @@
 		            	<li class="nav-item">
 		            	    <a class="nav-link" href="/blog" target="_blank">Blog</a>
 		            	</li>
-		            	<li class="nav-item">
-		            	    <a class="nav-link" href="/quotetool" target="_blank">Pricing</a>
-		            	</li>
 		                <li class="nav-item">
-		                    <a class="nav-link" href="/learnmore" target="_blank">About</a>
+		                    <a class="nav-link" href="/learnmore">About</a>
 		                </li>
 		                <li class="nav-item mr-3">
 		                	<a class="nav-link" href="https://github.com/levitytech" target="_blank"><i data-feather="github"></i></a>
 		                </li>
 		                <li class="nav-item">
-		                    <a class="btn btn-primary" href="https://calendly.com/bazyl/" target="_blank">Schedule a Meeting</a>
+		                    <a class="btn btn-primary" href="https://calendly.com/bazyl/" target="_blank">Free Consultation</a>
 		                </li>
 		            </ul>
 		        </div>
@@ -161,6 +161,21 @@
 
 			<div class="row py-3 mb-5 justify-content-center">
 
+
+				<div class="col-md-4 mt-4">
+					<div class="card text-center border-0 h-100">
+						<div class="card-img-top mx-auto backdrop">
+							<img src="img/iAscend.png" alt="Product image RB" class="img-fluid">
+						</div>
+						<div class="card-body pt-3">
+							<h6 class="text-muted font-weight-lighter">Mobile App</h6>
+							<h4 class="card-title mt-2">
+								iAscend
+							</h4>
+						</div>
+					</div>
+				</div>
+
 				<div class="col-md-4 mt-4">
 					<div class="card text-center border-0 position-relative">
 						<div class="card-img-top mx-auto backdrop">
@@ -255,7 +270,7 @@
 				<div class="col-md-4 col-lg-3 mr-auto mt-5">
 					<div class="card border-0 rounded-lg mt-4 h-100">
 						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
-							<img src="img/Michael.jpeg" alt="" class="img-fluid team-picture">
+							<img src="img/michael.jpeg" alt="" class="img-fluid team-picture">
 						</div>
 						<div class="card-body pt-3 pb-0">
 							<h4 class="card-title mt-2">
@@ -274,79 +289,11 @@
 						</div>
 					</div>
 				</div> <!-- /end of column -->
-				<div class="col-md-4 col-lg-3 mr-auto mt-5">
-					<div class="card border-0 rounded-lg mt-4 h-100">
-						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
-							<img src="img/Cole.jpeg" alt="" class="img-fluid team-picture">
-						</div>
-						<div class="card-body pt-3 pb-0">
-							<h4 class="card-title mt-2">
-								Cole Goslar
-								<br><small class="text-muted">Project Manager</small>
-							</h4>
-							<p class="card-text">
-								<span class="text-muted">
-									I joined the Levity Tech team because I could tell that they were dedicated and wanted to make a difference. Outside of working I enjoy working out and expanding my cinematic knowledge.
-								</span>
-							</p>
-						</div>
-						<div class="card-footer border-0 bg-white pt-0">
-							<a href="https://www.instagram.com/c11goslar/?hl=en" class="btn btn-link"><i data-feather="instagram"><span class="sr-only">Instagram</span></i></a>
-							<a href="https://www.linkedin.com/in/cole-goslar-8b7167195/" class="btn btn-link"><i data-feather="linkedin"><span class="sr-only">LinkedIn</span></i></a>	
-						</div>
-					</div>
-				</div> <!-- /end of column -->
-				<div class="col-md-4 col-lg-3 mr-auto mt-5">
-					<div class="card border-0 rounded-lg mt-4 h-100">
-						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
-							<img src="img/1606498645461.jpeg" alt="" class="img-fluid team-picture picture-martin">
-						</div>
-						<div class="card-body pt-3 pb-0">
-							<h4 class="card-title mt-2">
-								Martin Lee
-								<br><small class="text-muted">Sales Manager</small>
-							</h4>
-							<p class="card-text">
-								<span class="text-muted">
-									I'm passionate about gaming, memes, and dogs. I pause for a moment right before I say Worcestershire sauce.
-								</span>
-							</p>
-						</div>
-						<div class="card-footer border-0 bg-white pt-0">
-							<a href="https://www.linkedin.com/in/michaelmartinlee/" class="btn btn-link"><i data-feather="linkedin"><span class="sr-only">LinkedIn</span></i></a>	
-						</div>
-					</div>
-				</div> <!-- /end of column -->
-
-			</div> <!-- /end of row -->
-
-			<div class="row text-center py-3 mb-5">
-				<div class="col-md-4 col-lg-3 mr-auto mt-5">
-					<div class="card border-0 rounded-lg mt-4 h-100">
-						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
-							<img src="img/Alyssa.jpeg" alt="" class="img-fluid team-picture">
-						</div>
-						<div class="card-body pt-3 pb-0">
-							<h4 class="card-title mt-2">
-								Allyssa Ertz
-								<br><small class="text-muted">Designer</small>
-							</h4>
-							<p class="card-text">
-								<span class="text-muted">
-									I believe in the power of story. I love that there are so many ways you can tell stories, giving them immense power to actually create a change in the world.
-								</span>
-							</p>
-						</div>
-						<div class="card-footer border-0 bg-white pt-0">
-							<a href="https://www.linkedin.com/in/allyssa-ertz-09937612a/" class="btn btn-link"><i data-feather="linkedin"><span class="sr-only">LinkedIn</span></i></a>	
-						</div>
-					</div>
-				</div> <!-- /end of column -->
 
 				<div class="col-md-4 col-lg-3 mr-auto mt-5">
 					<div class="card border-0 rounded-lg mt-4 h-100">
 						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
-							<img src="img/Justin.jpeg" alt="" class="img-fluid team-picture">
+							<img src="img/justin.jpeg" alt="" class="img-fluid team-picture">
 						</div>
 						<div class="card-body pt-3 pb-0">
 							<h4 class="card-title mt-2">
@@ -365,30 +312,143 @@
 						</div>
 					</div>
 				</div> <!-- /end of column -->
-				
+
 				<div class="col-md-4 col-lg-3 mr-auto mt-5">
 					<div class="card border-0 rounded-lg mt-4 h-100">
 						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
-							<img src="img/Mitch.jpeg" alt="" class="img-fluid team-picture picture-mitch">
+							<img src="img/alyssa.jpeg" alt="" class="img-fluid team-picture">
 						</div>
 						<div class="card-body pt-3 pb-0">
 							<h4 class="card-title mt-2">
-								Mitch Hoeg
-								<br><small class="text-muted">Developer</small>
+								Alyssa Ertz
+								<br><small class="text-muted">Designer</small>
 							</h4>
 							<p class="card-text">
 								<span class="text-muted">
-									Phrase goes here.
+									I believe in the power of story. I love that there are so many ways you can tell stories, giving them immense power to actually create a change in the world.
 								</span>
 							</p>
 						</div>
 						<div class="card-footer border-0 bg-white pt-0">
-							<a href="https://github.com/mhoeg15" class="btn btn-link"><i data-feather="github"><span class="sr-only">Github</span></i></a>
-							<a href="https://www.linkedin.com/in/mitchell-hoeg-613b411b3/" class="btn btn-link"><i data-feather="linkedin"><span class="sr-only">LinkedIn</span></i></a>	
+							<a href="https://www.linkedin.com/in/allyssa-ertz-09937612a/" class="btn btn-link"><i data-feather="linkedin"><span class="sr-only">LinkedIn</span></i></a>	
 						</div>
 					</div>
 				</div> <!-- /end of column -->
-			</div>
+			</div> <!-- /end of row -->
+
+			<div class="row text-center py-3 mb-5">
+				<div class="col-md-4 col-lg-3 mr-auto mt-5">
+					<div class="card border-0 rounded-lg mt-4 h-100">
+						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
+							<img src="img/martin.jpeg" alt="" class="img-fluid team-picture">
+						</div>
+						<div class="card-body pt-3 pb-0">
+							<h4 class="card-title mt-2">
+								Martin Lee
+								<br><small class="text-muted">Sales Manager</small>
+							</h4>
+							<p class="card-text">
+								<span class="text-muted">
+									I'm passionate about the technology industry that continues to change at a drastic pace. I learn of new advancements which inspire me to adapt in determining cutting edge solutions for our clients.
+								</span>
+							</p>
+						</div>
+						<div class="card-footer border-0 bg-white pt-0">
+							<a href="https://www.linkedin.com/in/michaelmartinlee/" class="btn btn-link"><i data-feather="linkedin"><span class="sr-only">LinkedIn</span></i></a>	
+						</div>
+					</div>
+				</div> <!-- /end of column -->
+
+				<div class="col-md-4 col-lg-3 mr-auto mt-5">
+					<div class="card border-0 rounded-lg mt-4 h-100">
+						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
+							<img src="img/barra.jpg" alt="" class="img-fluid team-picture">
+						</div>
+						<div class="card-body pt-3 pb-0">
+							<h4 class="card-title mt-2">
+								Barra
+								<br><small class="text-muted">Operations Manager</small>
+							</h4>
+							<p class="card-text">
+								<span class="text-muted">
+									"The secret to growth is helping others grow" There is nothing more rewarding than seeing the smile and serenity on a person's face when it's you that has solved their problems for them!
+								</span>
+							</p>
+						</div>
+						<div class="card-footer border-0 bg-white pt-0">
+							<a href="https://www.linkedin.com/in/baraa-fattal/" class="btn btn-link"><i data-feather="linkedin"><span class="sr-only">LinkedIn</span></i></a>	
+						</div>
+					</div>
+				</div> <!-- /end of column -->
+
+				<div class="col-md-4 col-lg-3 mr-auto mt-5">
+					<div class="card border-0 rounded-lg mt-4 h-100">
+						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
+							<img src="img/cole.jpeg" alt="" class="img-fluid team-picture">
+						</div>
+						<div class="card-body pt-3 pb-0">
+							<h4 class="card-title mt-2">
+								Cole Goslar
+								<br><small class="text-muted">Project Manager</small>
+							</h4>
+							<p class="card-text">
+								<span class="text-muted">
+									I joined the Levity Tech team because I could tell that they were dedicated and wanted to make a difference. Outside of working I enjoy working out and expanding my cinematic knowledge.
+								</span>
+							</p>
+						</div>
+						<div class="card-footer border-0 bg-white pt-0">
+							<a href="https://www.instagram.com/c11goslar/?hl=en" class="btn btn-link"><i data-feather="instagram"><span class="sr-only">Instagram</span></i></a>
+							<a href="https://www.linkedin.com/in/cole-goslar-8b7167195/" class="btn btn-link"><i data-feather="linkedin"><span class="sr-only">LinkedIn</span></i></a>	
+						</div>
+					</div>
+				</div> <!-- /end of column -->
+
+				<div class="col-md-4 col-lg-3 mr-auto mt-5">
+					<div class="card border-0 rounded-lg mt-4 h-100">
+						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
+							<img src="img/ruth.jpg" alt="" class="img-fluid team-picture">
+						</div>
+						<div class="card-body pt-3 pb-0">
+							<h4 class="card-title mt-2">
+								Ruth
+								<br><small class="text-muted">Product Designer</small>
+							</h4>
+							<p class="card-text">
+								<span class="text-muted">
+								Hello! I'm a professional in the fields of design, spontaneous adventure and trying new food. Definitley an old soul in a young body and always happy to learn something new.	
+								</span>
+							</p>
+						</div>
+					</div>
+				</div> <!-- /end of column -->
+			</div> <!-- /end of row -->
+
+			<div class="row text-center py-3 mb-5">
+				<div class="col-md-4 col-lg-3 mr-auto mt-5">
+					<div class="card border-0 rounded-lg mt-4 h-100">
+						<div class="card-img-top w-50 mx-auto backdrop mt-n4">
+							<img src="img/bradley.jpg" alt="" class="img-fluid team-picture">
+						</div>
+						<div class="card-body pt-3 pb-0">
+							<h4 class="card-title mt-2">
+								Bradley Brown
+								<br><small class="text-muted">Developer</small>
+							</h4>
+							<p class="card-text">
+								<span class="text-muted">
+									I enjoy improving my skills and knowledge to provide quality services.
+									I spend my freetime with my dog and being passionate about decentralization.
+								</span>
+							</p>
+						</div>
+						<div class="card-footer border-0 bg-white pt-0">
+							<a href="https://github.com/byverone" class="btn btn-link"><i data-feather="github"><span class="sr-only">Github</span></i></a>
+							<a href="https://www.linkedin.com/in/bradley-brown-94a069193/" class="btn btn-link"><i data-feather="linkedin"><span class="sr-only">LinkedIn</span></i></a>	
+						</div>
+					</div>
+				</div> <!-- /end of column -->
+			</div> <!-- /end of row -->
 
 		</div> <!-- /end of container -->
 

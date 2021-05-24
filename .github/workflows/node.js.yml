@@ -23,6 +23,12 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run build
-    - run: npm run start
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install #runs yarn install
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: build #runs yarn build
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: start #runs yarn start
